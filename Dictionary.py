@@ -1,24 +1,29 @@
-#Creating dictionary
-Dict = dict([(1,'Kashish'), (2,'Kritika'), (3,'Aastha'), (4,'Vaishali'), (5,'Muskan')])
-print("Dictionary with each item as a pair:",Dict) #printing dictionary
+# Creating a dictionary  
+students = {1: 'Rahul', 2: 'Amit', 3: 'Neha', 4: 'Priya', 5: 'Sonia'}
+print("Dictionary:", students)
 
-#adding element in dictionary
-Dict[6] = 'Nitya'
-print("\n Dictionary with new item added:",Dict)
+# Adding a new entry  
+students[6] = 'Rohan'
+print("\nDictionary after adding a new student:", students)
 
-#updating values in dictionary
-Dict[3] = 'Navdisha'
-print("\n Dictionary with updated values:",Dict)
+# Updating a value  
+students[3] = 'Pooja'
+print("\nDictionary after updating a value:", students)
 
-print("\n Accessing one value in Dictionary:",Dict[1])
+# Accessing a specific value  
+print("\nAccessing a specific value:", students[1])
 
-#deleting value from drictionary
-del Dict[6]
-print("\n Delete a value from a Dictionary:",Dict)
+# Deleting a value  
+del students[6]
+print("\nDictionary after deleting a value:", students)
 
-#creating a nested dictionary
-Dict1 = {1: 'Kashish', 2: 'Kritika',
-        3:{'Age' : 18, 'Branch' : 'CSE', 'Year' : 'Third Year'}}
-print("\n Nested loop Dictionary:",Dict1)
+# Creating a nested dictionary  
+student_details = {
+    1: 'Rahul',
+    2: 'Amit',
+    3: {'Age': 20, 'Course': 'B.Tech', 'Year': 'Second'}
+}
+print("\nNested Dictionary:", student_details)
 
-print("\n Accessing an element of a Nested Dictionary:",Dict1[2])
+# Accessing a nested dictionary element  
+print("\nAccessing an element from the nested dictionary:", student_details[3]['Course'])
