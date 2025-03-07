@@ -4,7 +4,91 @@ string = 'Hello'
 print(string)
 
 string = "Hello"
-print(string)
+print(string)# Different ways of creating a string.
+
+text1 = 'Hello'
+print(text1)
+
+text2 = "Hello"
+print(text2)
+
+text3 = '''World'''
+print(text3)
+
+text4 = """Welcome to
+           the realm of Python""" # triple quotes allow multi-line strings
+print(text4)
+print()
+
+# Concatenating two strings using + operator
+concat_text = text1 + text3
+print("Concatenated two different strings:", concat_text)
+print()
+
+# Finding the length of the string.
+print("Length of the string:", len(concat_text))
+print()
+
+# Extracting a substring.
+
+# Searching in strings using index()
+search_text = 'developer'
+sub_text1 = 'lop'
+sub_text2 = 'e'
+print("Position of 'lop':", search_text.index(sub_text1))
+print("Position of 'e':", search_text.index(sub_text2))
+print()
+
+# Matching a String Against a Regular Expression With match().
+import re
+pattern = 'Naruto'
+quote = 'Naruto once said - Believe it!'
+print(re.match(pattern, quote))
+print()
+
+# Comparing strings.
+string_a = 'Sasuke Uchiha'
+string_b = 'Naruto Uzumaki'
+string_c = string_a
+print(string_a == string_b)
+print(string_a == string_c)
+print(string_b == string_c)
+print(string_a != string_b)
+print()
+
+# startsWith(), endsWith().
+hero = 'Jiraiya Sensei'
+print(hero.startswith("Jiraiya"))
+print(hero.endswith("Sensei"))
+print()
+
+# Trimming strings with strip().
+text_trim = 'Welcome Home!'
+print(text_trim.strip("!"))
+print()
+
+# Replacing characters in strings with replace()
+greeting = 'Hey there'
+print(greeting.replace("Hey", "Hello"))
+print()
+
+# Splitting strings with split()
+message = 'apple-banana-cherry'
+print(message.split("-"))
+print()
+
+# Converting integer objects to Strings.
+number = 25
+number_str = str(number)
+print(number_str)
+print(type(number_str))
+print()
+
+# Converting to uppercase and lowercase.
+lower_text = 'good morning'
+upper_text = 'EVENING'
+print(lower_text.upper())
+print(upper_text.lower())
 
 string1 = '''World'''
 print(string1)
