@@ -1,29 +1,29 @@
-class A():  
-    def display(dp):
-        print("Display Inside class A ")
- # class A show method    
+class Parent:  
+    def display(self):
+        print("Display inside Parent") 
+
     def show(self):
-        print("Show Inside class A")
+        print("Show inside Parent")
     
-# Inherited or Sub class (Note A in bracket) 
-class B (A): 
-    def print(pt):
-        print("Print Inside class B")    
-    # class B show method
+# First Child class inherits Parent
+class Child1(Parent): 
+    def print_message(self):
+        print("Print inside Child1")    
+
     def show(self):
-        print("Show Inside class B")
+        print("Show inside Child1")
     
-# Inherited or Sub class (Note B in bracket) 
-class C (B): 
-          
-    # class C show method
+# Second Child class inherits Child1
+class Child2(Child1): 
     def show(self):
-        print("Show Inside class C ")         
-    
-# Driver code 
-s = A()
-s.display()
-k= B()
-k.print()
-g = C()   
-g.show()
+        print("Show inside Child2")         
+
+# Creating objects of each class
+p = Parent()
+p.display()
+
+c1 = Child1()
+c1.print_message()
+
+c2 = Child2()   
+c2.show()   
