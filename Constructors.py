@@ -1,69 +1,57 @@
-from unicodedata import name
-
-
-class A:
-    # default constructor
+class Person:
     def __init__(self):
-     self.name = "Kashish"
-     # a method for printing data members
-    def print_A(self):
-        print(self.name)
-# creating object of the class
-obj = A()
-# calling the instance method using the object obj
-obj.print_A()
+        self.full_name = "Rahul"  
 
-class B(A):
+    def show_name(self):
+        print(self.full_name)
+
+person1 = Person()
+person1.show_name()
+
+
+class Student(Person):
     def __init__(self):
-     self.name = "KG"
-    def print_B(self):
-        print(self.name)
-obj1 = B()
-obj1.print_B()
+        self.full_name = "Aryan"
 
-class C:
-    # public data member
-    name = None
+    def show_student_name(self):
+        print(self.full_name)
 
-     # protected data members
-    _roll = None 
+student1 = Student()
+student1.show_student_name()
 
-     # private data member
-    __branch = None
 
-    # constructor
-    def __init__(self,name,roll,branch):
+class Details:
+    name = None  
+    _id = None  
+    __course = None  
+
+    def __init__(self, name, student_id, course):
         self.name = name  
-        self._roll = roll
-        self.__branch = branch  
-    def dsiplayName(self):
-        print("Name:",self.name)
-        # protected member function
-    def _displayRoll(self):
-         # accessing protected data members
-        print("Roll:",self._roll)
+        self._id = student_id  
+        self.__course = course  
 
-         # private member function 
-    def __displayBranch(self):
-        # accessing private data members
-        print("Branch:",self.__branch)
+    def show_details(self):
+        print("Name:", self.name)
 
-         # public member function
-    def access__displayBranch(self):     
-          # accessing private member function
-        self.__displayBranch()
+    def _show_id(self):
+        print("ID:", self._id)
 
-class D(C):
-    def __init__(self,name, roll, branch):
-        super().__init__(name,roll, branch)
-      # public member function
-    def access_displayRoll(self):            
-         # accessing protected member functions of super class
-        self._displayRoll()
+    def __show_course(self):
+        print("Course:", self.__course)
 
-# creating objects of the derived class    
-obj = D("Kashish", 5 , "CSE")
-# calling public member functions of the class  
-obj.dsiplayName()
-obj.access_displayRoll()
-obj.access__displayBranch()      
+    def access_course(self):
+        self.__show_course()
+
+
+class ExtraDetails(Details):
+    def __init__(self, name, student_id, course):
+        super().__init__(name, student_id, course)
+
+    def access_id(self):
+        self._show_id()
+
+
+student2 = ExtraDetails("Rahul", 101, "Computer Science")
+student2.show_details()
+student2.access_id()
+student2.access_course()
